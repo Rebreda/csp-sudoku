@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sudoku Solver</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.js"></script>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+</head>
+
+<body>
+  
+    <div>
+    
+    <p id="log"> </p>
+    
+    </div>
+  
+    <div id="sol" > </div>
+
+    <div id="do"><p> Solve this puzzle </p></div>
+    <input id="str" type="textarea" placeholder="enter string of board">
+    <style>
+    #log{
+      float: right;
+      top: 0px;
+      right: 10px;
+      position: absolute;
+    }
+      html, body{
+        height: 100%;
+        width: 100%;
+      }
+      #str{
+        width: 30%;
+        height: 40px;
+      }
+      input[type="text"] {
+        border: none;
+        border-color: transparent;
+        width: 100%;
+        height: 95%;
+        text-align: center;
+        vertical-align: middle;
+        color: black;
+        font-family: verdana;
+        font-size: 20px;
+      }
+
+      div#do{
+        margin-top: 50px;
+        background: purple;
+        color: white;
+        height: 40px;
+        cursor: pointer;
+        width: 250px;
+        border-radius: 10px;
+      }
+      div#sol{
+        width: 400px;
+        flex-wrap: wrap;
+        height: 400px;
+        display: flex;
+
+      }
+
+      .sq {
+        border: 1px solid black;
+        width: 10%;
+        text-align: center;
+        align-self: center;
+        height: 11%;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        align-content: center;
+      }
+
+      div.col {
+        border-left: 3px solid orange;
+      }
+
+      div.row{
+        border-top: 3px solid orange;
+      }
+
+      input.solved{
+        color: purple;
+      }
+
+      p {
+        font-family: sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+      }
+    </style>
+    <script src="csp.js"></script>
+    <script src="solver.js"></script>
+
+</body>
+
+</html>
